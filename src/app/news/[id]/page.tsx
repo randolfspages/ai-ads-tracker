@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   const news: NewsItem[] = await fetch(
     `https://news-api-next-js-kappa.vercel.app/api/news`
   ).then((res) => res.json());
-  return news.map((item) => ({
+    return news.map((item) => ({
     id: String(item?.id),
   }));
 }
