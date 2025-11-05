@@ -10,7 +10,7 @@ export async function generateStaticParams() {
     `https://news-api-next-js-kappa.vercel.app/api/news`
   ).then((res) => res.json());
   return news.map((item) => ({
-    id: String(item?._id),
+    id: String(item?.id),
   }));
 }
 
